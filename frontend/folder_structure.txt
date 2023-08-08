@@ -1,0 +1,28 @@
+
+Brief description of each folder
+
+1. assets/: This folder will contain any images and global styles for the application.
+    images/: Place any basketball-related images or logos here.
+    styles/: Store a global.css file with global styles for the entire app, like font families, colors, etc.
+
+2. components/: All reusable components will be placed here. We'll have subfolders for different types of components.
+    common/: Contains Header.js and Footer.js, which are common components used across all pages.
+    layout/: Contains Sidebar.js, representing a sidebar that might contain links to different pages.
+    shared/: Contains a sample component TeamLogo.js, used to display a team's logo.
+
+3. containers/: Contains container components that are connected to the application's state and logic.
+    TeamsContainer.js: This container component will handle the logic related to teams in the tournament.
+    MatchesContainer.js: This container component will manage the logic related to matches in the tournament.
+
+4. pages/: This folder contains components representing different pages/routes of the application.
+    Home.js: The landing page for the basketball tournament app.
+    Teams.js: A page to display a list of teams participating in the tournament.
+    Matches.js: A page to show the schedule of matches.
+
+5. services/: Contains fakeApi.js, a sample file simulating an API for fetching data. Since this is a frontend-only example, we'll create mock data and functions to simulate API calls.
+
+6. utils/: Contains helperFunctions.js, where you can place any utility functions used throughout the application.
+
+App.js: The root component of the application, where we'll define the main routing and layout structure. It will import components from pages/, containers/, and components/.
+
+index.js: The entry point of the React application, where we'll render the main App component and mount it to the DOM.

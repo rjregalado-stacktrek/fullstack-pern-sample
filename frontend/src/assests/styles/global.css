@@ -1,0 +1,109 @@
+/* global.css */
+
+/* Reset default margin and padding on all elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set box-sizing to border-box to include padding and border in element's total width and height */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Set a default font family and font size for the entire app */
+  body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Set a max-width for the content to center it on wider screens */
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the header section with a background color and center the content */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the navigation links in the header */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style the sidebar with a background color and fixed position on the left side */
+  .sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+  }
+  
+  /* Style the content area to display next to the sidebar */
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  
+  /* Style the teams list */
+  .teams-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Style the team logo and name container */
+  .team-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-logo img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the matches table */
+  .matches-page table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .matches-page th,
+  .matches-page td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .matches-page th {
+    background-color: #f0f0f0;
+  }
+  
+  /* Add more global styles as needed for your specific application */
+  
