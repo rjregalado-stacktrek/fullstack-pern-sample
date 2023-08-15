@@ -20,29 +20,32 @@ const MatchesContainer = () => {
   };
 
   return (
-    <div className="matches-container">
-      <h2>Matches Schedule</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Home Team</th>
-            <th>Away Team</th>
-          </tr>
-        </thead>
-        <tbody>
-          {matches.map((match) => (
-            <tr key={match.id}>
-              <td>{match.date}</td>
-              <td>{match.homeTeam}</td>
-              <td>{match.awayTeam}</td>
+    <div className="flex justify-center items-center h-screen">
+      <div className="matches-container">
+        <h2 className="text-center">Matches Schedule</h2>
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Home Team</th>
+              <th>Away Team</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {matches.map((match) => (
+              <tr key={match.id}>
+                <td>{match.date}</td>
+                <td>{match.homeTeam}</td>
+                <td>{match.awayTeam}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
 
 export default MatchesContainer;
+
 

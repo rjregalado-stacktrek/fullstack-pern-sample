@@ -1,27 +1,41 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Form, Switch } from 'react-router-dom';
 import Header from './components/common/Header';
-import Sidebar from './components/layout/Sidebar';
 import Home from './pages/Home';
 import Teams from './pages/Teams';
 import Matches from './pages/Matches';
+import Footer from './components/common/Footer'
+import Sidebar1 from './components/layout/Sidebar1';
+import Dashboard from './pages/Dashboard';
+import Media from './pages/Media';
+import LeagueForm from './components/shared/LeagueForm';
 
 
 const App = () => {
   return (
-    <Router>
+   
+   <Router>
       <div className="app-container">
         <Header />
+        <div className="flex h-screen">
+          <Sidebar1 />
+            <div className="flex-1 bg-gray-100 p-8">
+              <LeagueForm />
+            </div>
+            <div className="flex-2 bg-gray-100 p-8">
+              <LeagueForm />
+            </div>
+        </div>
         <div className="content">
-          <Sidebar />
           <Routes>
-            <Route exact path="/" component={Home} />
-            <Route path="/teams" component={Teams} />
-            <Route path="/matches" component={Matches} />
-            {/* Add more routes for other pages here */}
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/media" element={<Media />} />
           </Routes>
         </div>
+
+        <Footer />
       </div>
     </Router>
   );

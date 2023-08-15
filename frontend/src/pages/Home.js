@@ -1,8 +1,10 @@
 import React from 'react';
+import Sidebar from '../components/layout/Sidebar';
 
 const Home = () => {
   return (
     <div className="home-container">
+      <Sidebar/>
       <h1>Welcome to the Basketball Tournament!</h1>
       <p>
         Join us for an exciting basketball tournament where teams from all over the world will compete
