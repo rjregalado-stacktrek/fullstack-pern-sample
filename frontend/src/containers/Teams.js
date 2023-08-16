@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TeamLogo from '../components/shared/TeamLogo';
 import { getTeams } from '../services/fakeApi'; // Assuming you have a fake API service to fetch teams data
 
-const TeamsContainer = () => {
+const Teams = () => {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
@@ -21,16 +21,20 @@ const TeamsContainer = () => {
   };
 
   return (
-    <div className="teams-container">
-      <h2>Teams in the Tournament</h2>
-      <div className="teams-list">
+    <div className="centered text-xl h-screen flex-col">
+      <div>
+      <h2 className='text-blue-900 text-4xl text-center'>Teams in the Tournament</h2>
+      </div>
+
+      <div className="text-center">
         {teams.map((team) => (
           <TeamLogo key={team.id} teamName={team.name} imageUrl={team.logoUrl} />
-        ))}
+         ))}
+
       </div>
     </div>
   );
 };
 
-export default TeamsContainer;
+export default Teams;
 

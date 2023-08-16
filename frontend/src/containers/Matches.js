@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getMatches } from '../services/fakeApi'; // Assuming you have a fake API service to fetch matches data
 
-const MatchesContainer = () => {
+const Matches = () => {
   const [matches, setMatches] = useState([]);
 
   useEffect(() => {
@@ -20,23 +20,23 @@ const MatchesContainer = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="centered text-xl h-screen">
       <div className="matches-container">
-        <h2 className="text-center">Matches Schedule</h2>
+        <h2 className="text-blue-900 text-4xl text-center py-2">Matches Schedule</h2>
         <table className="w-full">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Home Team</th>
-              <th>Away Team</th>
+              <th className='px-4 py-2'>Date</th>
+              <th className='px-4 py-2'>Home Team</th>
+              <th className='px-4 py-2'>Away Team</th>
             </tr>
           </thead>
           <tbody>
             {matches.map((match) => (
               <tr key={match.id}>
-                <td>{match.date}</td>
-                <td>{match.homeTeam}</td>
-                <td>{match.awayTeam}</td>
+                <td className='px-4 py-2'>{match.date}</td>
+                <td className='px-4 py-2'>{match.homeTeam}</td>
+                <td className='px-4 py-2'>{match.awayTeam}</td>
               </tr>
             ))}
           </tbody>
@@ -46,6 +46,6 @@ const MatchesContainer = () => {
   );
 };
 
-export default MatchesContainer;
+export default Matches;
 
 

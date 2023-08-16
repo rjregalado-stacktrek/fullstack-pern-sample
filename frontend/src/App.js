@@ -1,48 +1,19 @@
+import React from "react";
+import "./App.css";
+import MainPage from "./components/MainPage";
+import { BrowserRouter } from "react-router-dom";
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Form, Switch } from 'react-router-dom';
-import Header from './components/common/Header';
-import Home from './pages/Home';
-import Teams from './pages/Teams';
-import Matches from './pages/Matches';
-import Footer from './components/common/Footer'
-import Sidebar1 from './components/layout/Sidebar1';
-import Dashboard from './pages/Dashboard';
-import Media from './pages/Media';
-import LeagueForm from './components/shared/LeagueForm';
-
-
-const App = () => {
+function App() {
   return (
-   
-   <Router>
-      <div className="app-container">
-        <Header />
-        <div className="flex h-screen">
-          <Sidebar1 />
-            <div className="flex-1 bg-gray-100 p-8">
-              <LeagueForm />
-            </div>
-            <div className="flex-2 bg-gray-100 p-8">
-              <LeagueForm />
-            </div>
-        </div>
-        <div className="content">
-          <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/teams" element={<Teams />} />
-            <Route path="/media" element={<Media />} />
-          </Routes>
-        </div>
-
-        <Footer />
-      </div>
-    </Router>
+    <React.Fragment>
+      <BrowserRouter>
+        <MainPage />
+      </BrowserRouter>
+    </React.Fragment>
   );
-};
+}
 
 export default App;
-
 
 
 

@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 function Dashboard() {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
-  )
+    <React.Fragment>
+    <section>
+      <div className="centered text-4xl h-screen">This is Dashboard Page</div>
+    </section>
+  </React.Fragment>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
+
+
